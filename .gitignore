@@ -4,8 +4,8 @@ org-persist/
 server/
 custom.el
 local.el
-
+recentf
+eln-cache/
 *~
 \#*\#
 *.elc
-recentf
