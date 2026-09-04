@@ -1,0 +1,8 @@
+elpa/
+auto-save-list/
+org-persist/
+server/
+custom.el
+*.elc
+#*#
+*~
