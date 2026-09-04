@@ -1,3 +1,4 @@
+;;; init-elpa.el --- Package setup -*- lexical-binding: t; -*-
 ;; 包管理
 (require 'package)
 

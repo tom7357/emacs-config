@@ -1,3 +1,4 @@
+;;; init-ui.el --- UI settings -*- lexical-binding: t; -*-
 ;; gruvbox-theme
 (use-package gruvbox-theme 
     :init (load-theme 'gruvbox-dark-soft t))
