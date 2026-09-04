@@ -3,6 +3,8 @@ auto-save-list/
 org-persist/
 server/
 custom.el
-*.elc
-#*#
+local.el
+
 *~
+\#*\#
+*.elc

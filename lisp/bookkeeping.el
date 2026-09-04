@@ -5,7 +5,15 @@
   "Quick bookkeeping in Org."
   :group 'convenience)
 
-(defcustom book-base-dir (expand-file-name "Z:/onedrive/06_Personal_Data/Bank_and_Finance/Bookkeeping/weekly")
+;;; bookkeeping.el --- Fast Org-mode bookkeeping for weekly files -*- lexical-binding: t; -*-
+(setq inhibit-startup-screen t)
+;; ▶ 可自定义
+(defgroup book nil
+  "Quick bookkeeping in Org."
+  :group 'convenience)
+
+(defcustom book-base-dir
+  (expand-file-name "~/Bookkeeping/weekly")
   "记账周文件所在目录。"
   :type 'directory)
 
