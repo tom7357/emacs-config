@@ -3,17 +3,21 @@
 (add-to-list 'load-path
              (expand-file-name "lisp" user-emacs-directory))
 
+;; Customize writes into a separate file.
 (setq custom-file
-      (expand-file-name "custom.el" user-emacs-directory))
+      (locate-user-emacs-file "custom.el"))
+
+(when (file-exists-p custom-file)
+  (load custom-file nil 'nomessage))
 
 (add-hook 'after-init-hook
           (lambda ()
             (setq gc-cons-threshold (* 16 1024 1024))))
 
 (require 'init-const)
+(require 'init-os)
 
 ;; package / use-package must be initialized before modules using use-package
-(require 'init-os)
 (require 'init-elpa)
 
 (require 'init-kbd)
@@ -23,7 +27,7 @@
 (require 'init-package)
 
 ;; Machine-specific settings.
-(let ((local-file (expand-file-name "local.el" user-emacs-directory)))
+(let ((local-file (locate-user-emacs-file "local.el")))
   (when (file-exists-p local-file)
     (load local-file nil 'nomessage)))
 

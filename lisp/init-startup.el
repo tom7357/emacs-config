@@ -36,10 +36,6 @@
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 (add-hook 'prog-mode-hook #'prettify-symbols-mode)
 
-;; 自定义文件
-(when (file-exists-p custom-file)
-  (load custom-file nil 'nomessage))
-
 (provide 'init-startup)
 
 ;;; init-startup.el ends here
