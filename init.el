@@ -13,6 +13,7 @@
 (require 'init-const)
 
 ;; package / use-package must be initialized before modules using use-package
+(require 'init-os)
 (require 'init-elpa)
 
 (require 'init-kbd)
