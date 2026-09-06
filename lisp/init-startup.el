@@ -6,6 +6,16 @@
       auto-save-default nil
       ring-bell-function 'ignore)
 
+(setq completion-styles
+      '(basic substring partial-completion flex))
+
+(setq completion-category-overrides
+      '((file (styles partial-completion))
+        (buffer (styles substring))
+        (command (styles flex))))
+
+;; 取消安全确认
+(setq org-confirm-babel-evaluate nil)
 ;; 编码
 (prefer-coding-system 'utf-8)
 (set-language-environment "UTF-8")

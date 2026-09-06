@@ -73,6 +73,13 @@
   :defer t
   :bind ("C-c r" . quickrun))
 
+(use-package avy
+  :ensure t
+  :bind
+  (("C-;" . avy-goto-char)
+   ("C-'" . avy-goto-char-2)
+   ("M-g l" . avy-goto-line)))
+
 (provide 'init-package)
 
 ;;; init-package.el ends here
