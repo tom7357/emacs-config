@@ -9,6 +9,10 @@
   (company-selection-wrap-around t)
   (company-tooltip-limit 10))
 
+(use-package org-superstar
+  :ensure t
+  :hook (org-mode . org-superstar-mode))
+
 (use-package move-dup
   :ensure t
   :bind
