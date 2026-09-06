@@ -3,5 +3,6 @@
 
 (global-set-key (kbd "M-]") #'flymake-goto-next-error)
 (global-set-key (kbd "M-[") #'flymake-goto-prev-error)
+(global-set-key (kbd "C-x C-b") #'ibuffer)
 
 (provide 'init-kbd)
