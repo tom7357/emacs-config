@@ -1,8 +1,10 @@
+;;; init-startup.el --- Startup settings -*- lexical-binding: t; -*-
+
 ;; 基础设置
-(setq inhibit-startup-screen t)
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-(setq ring-bell-function 'ignore)
+(setq inhibit-startup-screen t
+      make-backup-files nil
+      auto-save-default nil
+      ring-bell-function 'ignore)
 
 ;; 编码
 (prefer-coding-system 'utf-8)
@@ -12,23 +14,27 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
-(setq gc-cons-threshold most-positive-fixnum)
-
 ;; 界面
 (menu-bar-mode 1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
 (global-display-line-numbers-mode 1)
 (column-number-mode 1)
 
-;; 自动括号
+;; 编辑体验
 (electric-pair-mode 1)
+(global-auto-revert-mode 1)
+(auto-save-visited-mode 1)
+(delete-selection-mode 1)
+(fido-vertical-mode 1)
+(recentf-mode 1)
+(repeat-mode 1)
 
+(when (display-graphic-p)
+  (global-hl-line-mode 1))
 
-
-;; 自定义文件，避免 custom 写进 init.el
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;; 自定义文件
 (when (file-exists-p custom-file)
-  (load custom-file))
+  (load custom-file nil 'nomessage))
 
 (provide 'init-startup)
+
+;;; init-startup.el ends here
