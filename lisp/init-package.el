@@ -9,6 +9,14 @@
   (company-selection-wrap-around t)
   (company-tooltip-limit 10))
 
+(use-package move-dup
+  :ensure t
+  :bind
+  (("M-<up>"   . move-dup-move-lines-up)
+   ("M-<down>" . move-dup-move-lines-down)
+   ("C-c d"    . move-dup-duplicate-down)))
+
+
 (provide 'init-package)
 
 ;;; init-package.el ends here
