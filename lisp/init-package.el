@@ -17,6 +17,12 @@
    ("C-c d"    . move-dup-duplicate-down)))
 
 
+(use-package which-key
+  :ensure t
+  :hook (after-init . which-key-mode)
+  :custom
+  (which-key-idle-delay 0.5))
+
 (provide 'init-package)
 
 ;;; init-package.el ends here
