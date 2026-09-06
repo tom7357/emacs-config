@@ -55,6 +55,15 @@
                '(js-mode . js-ts-mode)))
 
 
+(use-package eglot
+  :ensure nil
+  :hook
+  ((c-mode c-ts-mode) . eglot-ensure)
+  ((c++-mode c++-ts-mode) . eglot-ensure)
+  ((java-mode java-ts-mode) . eglot-ensure)
+  :bind
+  ("C-c e f" . eglot-format))
+
 (provide 'init-package)
 
 ;;; init-package.el ends here
