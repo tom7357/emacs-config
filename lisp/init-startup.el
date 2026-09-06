@@ -16,11 +16,9 @@
 
 ;; 界面
 (menu-bar-mode 1)
-(global-display-line-numbers-mode 1)
 (column-number-mode 1)
 
-;; 编辑体验
-(electric-pair-mode 1)
+;; 日常编辑
 (global-auto-revert-mode 1)
 (auto-save-visited-mode 1)
 (delete-selection-mode 1)
@@ -30,6 +28,13 @@
 
 (when (display-graphic-p)
   (global-hl-line-mode 1))
+
+;; 编程模式
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'electric-pair-mode)
+(add-hook 'prog-mode-hook #'flymake-mode)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+(add-hook 'prog-mode-hook #'prettify-symbols-mode)
 
 ;; 自定义文件
 (when (file-exists-p custom-file)
