@@ -64,6 +64,11 @@
   :bind
   ("C-c e f" . eglot-format))
 
+(use-package quickrun
+  :ensure t
+  :defer t
+  :bind ("C-c r" . quickrun))
+
 (provide 'init-package)
 
 ;;; init-package.el ends here
